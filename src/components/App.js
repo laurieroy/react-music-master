@@ -9,7 +9,6 @@ class App extends Component {
   state = { artist: null, tracks: [] };
 
   searchArtist = artistQuery => {
-
     fetch(`${API_ADDRESS}/artist/${artistQuery}`)
       .then(response => response.json())
       .then(json => {
@@ -25,7 +24,6 @@ class App extends Component {
         }
     })
     .catch(error => alert(error.message));
-
   }
   
   render() {
